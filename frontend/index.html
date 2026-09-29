@@ -15,6 +15,35 @@
         </div>
         <div class="badge">Sistemas Embarcados & IoT</div>
     </header>
-    
+    <main>
+        <div class="controls-card">
+            <div class="input-group">
+                <label for="apiUrl">URL API:</label>
+                <input type="text" id="apiUrl" value="https://localhost:3000/api/clima">
+            </div>
+            <label class="toggle-group" for="">
+                <input type="checkbox" id="demoMode" checked>
+                Modo Simulação (Sem Backend)
+            </label>
+        </div>
+        <div class="grid">
+            <div class="card" style="border-top-color: var(--temp-color);">
+                <div class="card-header">
+                    <span class="card-title">Temperatura: </span>
+                    <div class="card-icon icon-temp">°C</div>
+                </div>
+                <div id="temp" class="metric-value">-- °C</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Sensor DHT</p>
+            </div>
+            <div class="card" style="border-top-color: var(--unid-color);">
+                <div class="card-header">
+                    <span class="card-title">Umidade Relativa:</span>
+                    <div class="card-icon icon-umid">%</div>
+                </div>
+                <div id="umid" class="metric-value">-- %</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Sensor ESP32 / DHT</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
